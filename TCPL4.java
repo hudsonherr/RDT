@@ -2,6 +2,10 @@ import java.util.*;
 
 public class TCPL4
 {
+	//The program expects 3 arguments when it is run: 
+   //(1) the percent of packets that have a bit error 
+   //(2) the max delay if a packet is delayed, and 
+   //(3) the percent of time a packet is delayed. 
    public TCPL4()
    {
    
