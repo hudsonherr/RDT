@@ -29,9 +29,16 @@ public class TCPL4
       Pipelining
     */
 	
-   public TCPL4()
+    private int ACKnum; //ACK can be 0 (not received) or 1 (recieved)
+    private int timer;  //timer keeps track of how long a bit takes to send, if it reaches maxDelay, it sends bit again
+    private int SEQnum; //SEQnum is used to keep track of the identity of the bits sent and let the sender know which bits were received successfully
+    
+
+   public TCPL4(int ack, int time, int seq)
    {
-   
+   	ACKnum = ack;
+	timer = time;
+	SEQnum = seq;
    }
    
    //send is effectively implemented as UDT right now. It just passes the message down to layer 3 with nothing extra.
