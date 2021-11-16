@@ -53,7 +53,7 @@ public class TCPL4
       //you can have an array with more than 1 int for things like times / seq nums / etc.
       int [] dataArray = new int[3];
 
-      dataArray[0] = message;
+      dataArray[4] = message;
 	   
       return dataArray;
    }
