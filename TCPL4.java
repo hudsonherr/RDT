@@ -6,6 +6,29 @@ public class TCPL4
    //(1) the percent of packets that have a bit error 
    //(2) the max delay if a packet is delayed, and 
    //(3) the percent of time a packet is delayed. 
+	
+   /*
+   REED
+   Four functions of reliable data transfer:
+      receive data
+      encapsulate data prior to sending
+      un-encapsulate data upon receipt
+      send data
+   (must be this way in both directions; Host A to Host B and Host B to Host A)
+   */
+   
+   /*
+   REED
+   Features of Reliable Data Transfer Protocol:
+      Acknowledgement (ACK) - adding an extra bit in the data segment being transmitted accomplishes this
+      Timeouts - timer variable
+      Congestion Control
+      End-to-End
+      Network Assissted
+      Sequence Numbers (SEQ)
+      Pipelining
+    */
+	
    public TCPL4()
    {
    
