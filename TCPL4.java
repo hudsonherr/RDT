@@ -44,14 +44,17 @@ public class TCPL4
    }
    
    //send is effectively implemented as UDT right now. It just passes the message down to layer 3 with nothing extra.
+   //Reed - in order to make send RDT, we need to implement an ACK, a Timer variable, and a sequence number (SEQ)
+
    
    //message is the message that sender is going to send
    public int[] send(int message)
    {
       //you can have an array with more than 1 int for things like times / seq nums / etc.
-      int [] dataArray = new int[1];
+      int [] dataArray = new int[3];
 
       dataArray[0] = message;
+	   
       return dataArray;
    }
 
