@@ -29,6 +29,7 @@ public class TCPL4
       Pipelining
     */
 	
+	//REED...
     private int ACKnum; //ACK can be 0 (not received) or 1 (recieved)
     private int timer;  //timer keeps track of how long a bit takes to send, if it reaches maxDelay, it sends bit again
     private int SEQnum; //SEQnum is used to keep track of the identity of the bits sent and let the sender know which bits were received successfully
@@ -36,6 +37,7 @@ public class TCPL4
 
    public TCPL4(int ack, int time, int seq)
    {
+	   //REED ...
    	ACKnum = ack;
 	timer = time;
 	SEQnum = seq;
