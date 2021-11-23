@@ -51,10 +51,21 @@ public class TCPL4
    public int[] send(int message)
    {
       //you can have an array with more than 1 int for things like times / seq nums / etc.
-      int [] dataArray = new int[3];
+      int [] dataArray = new int[4];
 
-      dataArray[4] = message;
+      dataArray[0] = message;
 	   
+      //if message goes through, set ACKnum to 1 or to 0 if not (NAK)
+      dataArray[1] = ACKnum; //R - ACK is second index in array
+      
+      //if timer reaches maxDelay, send packet again
+      dataArray[2] = timer; //R - timer is third index in array
+      
+      //used to identify which packet is which
+      //checksum goes somewhere in here
+      dataArray[3] = SEQnum; //R - SEQ is fourth index in array
+      
+
       return dataArray;
    }
 
